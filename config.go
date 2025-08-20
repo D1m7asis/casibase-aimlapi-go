@@ -1,16 +1,16 @@
-package openrouter
+package aimlapi
 
 import (
 	"net/http"
 )
 
 const (
-	routerAPIURLv1                 = "https://openrouter.ai/api/v1"
+	aimlAPIURLv1                   = "https://api.aimlapi.com/v1"
 	defaultEmptyMessagesLimit uint = 300
 )
 
 // ClientConfig is a configuration of a client.
-// XTitle、HttpRefer your own site url
+// authToken is your API key
 type ClientConfig struct {
 	authToken          string
 	XTitle             string
@@ -23,10 +23,10 @@ type ClientConfig struct {
 func DefaultConfig(auth, xTitle, httpReferer string) (ClientConfig, error) {
 	return ClientConfig{
 		authToken:          auth,
-		HTTPClient:         &http.Client{},
 		XTitle:             xTitle,
 		HttpReferer:        httpReferer,
-		BaseURL:            routerAPIURLv1,
+		HTTPClient:         &http.Client{},
+		BaseURL:            aimlAPIURLv1,
 		EmptyMessagesLimit: defaultEmptyMessagesLimit,
 	}, nil
 }

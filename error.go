@@ -1,4 +1,4 @@
-package openrouter
+package aimlapi
 
 import (
 	"encoding/json"

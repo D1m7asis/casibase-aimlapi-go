@@ -1,10 +1,10 @@
-package openrouter
+package aimlapi
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
-	utils "github.com/Lok-Lu/go-openrouter/internal"
+	utils "github.com/casibase/aimlapi-go/internal"
 	"io"
 	"net/http"
 )

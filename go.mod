@@ -1,3 +1,3 @@
-module github.com/Lok-Lu/go-openrouter
-go 1.19
+module github.com/casibase/aimlapi-go
 
+go 1.19

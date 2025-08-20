@@ -1,4 +1,4 @@
-package openrouter
+package aimlapi
 
 import (
 	"context"
@@ -9,7 +9,7 @@ func TestClient_CreateChatCompletion(t *testing.T) {
 	client, _ := NewClient("", "", "")
 
 	req := &ChatCompletionRequest{
-		Model: "claude-2",
+		Model: ModelGPT4,
 		Messages: []ChatCompletionMessage{
 			{
 				Role:    ChatMessageRoleSystem,

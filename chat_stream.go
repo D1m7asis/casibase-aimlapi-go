@@ -1,9 +1,9 @@
-package openrouter
+package aimlapi
 
 import (
-	"bufio"
-	"context"
-	utils "github.com/Lok-Lu/go-openrouter/internal"
+        "bufio"
+        "context"
+        utils "github.com/casibase/aimlapi-go/internal"
 )
 
 type ChatCompletionStream struct {
@@ -15,20 +15,15 @@ type ChatCompletionStream struct {
 // sent as data-only server-sent events as they become available, with the
 // stream terminated by a data: [DONE] message.
 func (c *Client) CreateChatCompletionStream(
-	ctx context.Context,
-	request *ChatCompletionRequest,
+        ctx context.Context,
+        request *ChatCompletionRequest,
 ) (stream *ChatCompletionStream, err error) {
-	urlSuffix := "/chat/completions"
-	request.Model = wrapperModels[request.Model]
-	if !checkSupportsModel(request.Model) {
-		err = ErrCompletionUnsupportedModel
-		return
-	}
-	request.Stream = true
-	req, err := c.newStreamRequest(ctx, "POST", urlSuffix, request)
-	if err != nil {
-		return
-	}
+        urlSuffix := "/chat/completions"
+        request.Stream = true
+        req, err := c.newStreamRequest(ctx, "POST", urlSuffix, request)
+        if err != nil {
+                return
+        }
 
 	resp, err := c.config.HTTPClient.Do(req) //nolint:bodyclose // body is closed in stream.Close()
 	if err != nil {

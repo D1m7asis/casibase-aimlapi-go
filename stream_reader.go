@@ -1,14 +1,14 @@
-package openrouter
+package aimlapi
 
 import (
-	"bufio"
-	"bytes"
-	"errors"
-	"fmt"
-	"io"
-	"net/http"
+        "bufio"
+        "bytes"
+        "errors"
+        "fmt"
+        "io"
+        "net/http"
 
-	utils "github.com/Lok-Lu/go-openrouter/internal"
+        utils "github.com/casibase/aimlapi-go/internal"
 )
 
 var (

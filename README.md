@@ -1,6 +1,6 @@
 # aimlapi-go
 
-Go client for the [AI/ML API](https://api.aimlapi.com/v1) which provides access to
+Go client for the [AI/ML API](https://aimlapi.com/) which provides access to
 hundreds of models such as DeepSeek, Gemini, and ChatGPT.
 
 ## Usage
@@ -8,7 +8,7 @@ hundreds of models such as DeepSeek, Gemini, and ChatGPT.
 ```go
 package main
 
-import "github.com/casibase/aimlapi-go"
+import "github.com/D1m7asis/casibase-aimlapi-go"
 
 func main() {
     client, _ := aimlapi.NewClient("API_KEY", "MyApp", "https://example.com")

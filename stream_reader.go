@@ -8,7 +8,7 @@ import (
         "io"
         "net/http"
 
-        utils "github.com/casibase/aimlapi-go/internal"
+        utils "github.com/D1m7asis/casibase-aimlapi-go/internal"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	utils "github.com/casibase/aimlapi-go/internal"
+	utils "github.com/D1m7asis/casibase-aimlapi-go/internal"
 	"io"
 	"net/http"
 )

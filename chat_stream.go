@@ -3,7 +3,7 @@ package aimlapi
 import (
         "bufio"
         "context"
-        utils "github.com/casibase/aimlapi-go/internal"
+        utils "github.com/D1m7asis/casibase-aimlapi-go/internal"
 )
 
 type ChatCompletionStream struct {
